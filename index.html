@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malik Dubai</title>
 
-<!-- META PIXEL -->
+<title>HAJI SALMAN MEMON™</title>
+
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,179 +17,467 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','1153714410071909');
-fbq('track','PageView');
+fbq('init', '1671426427431499');
+fbq('track', 'PageView');
 </script>
 
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1671426427431499&ev=PageView&noscript=1"/>
+</noscript>
+
 <style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-font-family:Arial;
-background:#0b0f19;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+body {
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: #fff;
+
+    background:
+        radial-gradient(circle at top, #123d2b 0%, transparent 40%),
+        linear-gradient(145deg, #03130d, #061f15 50%, #020a07);
+
+    overflow-x: hidden;
 }
 
-/* MAIN CARD */
+/* Islamic decorative background */
+body::before {
+    content: "☪";
+    position: fixed;
+    top: 20px;
+    left: 20px;
 
-.container{
-width:380px;
-background:#111827;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    font-size: 110px;
+    color: rgba(218, 178, 76, 0.045);
+
+    pointer-events: none;
 }
 
-/* HEADER */
+body::after {
+    content: "ﷲ";
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
 
-.header{
-background:linear-gradient(135deg,#6a5cff,#ff3cac);
-padding:30px;
-text-align:center;
+    font-size: 130px;
+    color: rgba(218, 178, 76, 0.035);
+
+    pointer-events: none;
 }
 
-.profile{
-width:110px;
-height:110px;
-border-radius:20px;
-object-fit:cover;
-animation:float 3s ease-in-out infinite;
+/* Main Card */
+.container {
+    width: 100%;
+    max-width: 460px;
+
+    padding: 32px 25px 26px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 48, 33, 0.98),
+            rgba(3, 20, 13, 0.98)
+        );
+
+    border: 1px solid rgba(218, 178, 76, 0.65);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.02),
+        0 20px 60px rgba(0,0,0,0.65),
+        0 0 35px rgba(218,178,76,0.12);
+
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-8px);}
-100%{transform:translateY(0px);}
+/* Gold top line */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d9b24c,
+            #f4d477,
+            #d9b24c,
+            transparent
+        );
 }
 
-.name{
-font-size:28px;
-font-weight:bold;
-margin-top:15px;
+/* Islamic pattern */
+.pattern {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.035;
+
+    background-image:
+        linear-gradient(30deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff),
+        linear-gradient(150deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff),
+        linear-gradient(30deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff),
+        linear-gradient(150deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff);
+
+    background-size: 40px 70px;
+    background-position: 0 0, 0 0, 20px 35px, 20px 35px;
+
+    pointer-events: none;
 }
 
-/* BADGES */
+/* Islamic Logo */
+.logo-box {
+    width: 115px;
+    height: 115px;
 
-.badges{
-margin-top:12px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #164e35 0%,
+            #0a2a1b 65%,
+            #06170f 100%
+        );
+
+    border: 3px solid #d9b24c;
+
+    box-shadow:
+        0 0 0 5px rgba(217,178,76,0.08),
+        0 0 25px rgba(217,178,76,0.15);
+
+    position: relative;
+    z-index: 2;
 }
 
-.badge{
-display:inline-block;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
-margin:5px;
+.logo-allah {
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    color: #f3d57a;
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
-.premium{
-background:#8b5cf6;
+.logo-quran {
+    font-size: 11px;
+    color: #e7d8a8;
+    letter-spacing: 1.5px;
 }
 
-.live{
-background:#22c55e;
+/* Brand */
+.brand-small {
+    color: #d9b24c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
 }
 
-/* MEMBERS */
+h1 {
+    font-size: 25px;
+    font-weight: 800;
 
-.members{
-margin-top:10px;
-font-size:15px;
+    color: #fff;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 7px;
 }
 
-/* STATS */
-
-.stats{
-display:flex;
-gap:12px;
-padding:20px;
+.subtitle {
+    color: #cdbf9b;
+    font-size: 13px;
+    margin-bottom: 25px;
 }
 
-.card{
-flex:1;
-padding:20px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0 15px 25px;
+
+    color: #d9b24c;
 }
 
-.win{
-background:linear-gradient(45deg,#22c55e,#16a34a);
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(217,178,76,0.6)
+        );
 }
 
-.rating{
-background:linear-gradient(45deg,#f97316,#fb923c);
+.divider::after {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(217,178,76,0.6),
+            transparent
+        );
 }
 
-/* TELEGRAM BUTTON */
+/* Features */
+.features-list {
+    list-style: none;
+    text-align: left;
 
-.telegram{
-margin:0 20px 20px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:16px;
-border-radius:15px;
-background:linear-gradient(90deg,#6366f1,#a855f7);
-color:white;
-font-weight:bold;
-text-decoration:none;
-font-size:16px;
+    margin: 0 5px 25px;
 }
 
-.telegram img{
-width:20px;
+.features-list li {
+    display: flex;
+    align-items: center;
+
+    padding: 14px 13px;
+    margin-bottom: 10px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(217,178,76,0.10);
+
+    color: #e5e1d5;
+
+    font-size: 14px;
+    line-height: 1.35;
+
+    transition: 0.2s ease;
 }
 
-/* FEATURES */
+.features-list li:hover {
+    transform: translateY(-1px);
 
-.features{
-display:flex;
-justify-content:space-around;
-padding:20px;
-text-align:center;
+    background: rgba(217,178,76,0.07);
+
+    border-color: rgba(217,178,76,0.3);
 }
 
-.feature{
-font-size:13px;
+.icon {
+    width: 37px;
+    height: 37px;
+
+    min-width: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 12px;
+
+    border-radius: 11px;
+
+    background: rgba(217,178,76,0.10);
+
+    border: 1px solid rgba(217,178,76,0.22);
+
+    color: #f0cf6c;
+
+    font-size: 18px;
 }
 
-.icon{
-width:45px;
-height:45px;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-margin-bottom:6px;
-font-size:20px;
+/* Learning text */
+.learning-text {
+    color: #c9c9c0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin: 5px 15px 18px;
 }
 
-.v{background:#22c55e;}
-.s{background:#3b82f6;}
-.p{background:#ec4899;}
-.t{background:#f59e0b;}
+/* Telegram Button */
+.telegram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-/* FOOTER */
+    width: 100%;
 
-.footer{
-text-align:center;
-padding:15px;
-font-size:13px;
-color:#9ca3af;
+    padding: 17px 20px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: #07140d;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3d57a,
+            #d5a934
+        );
+
+    font-size: 17px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 7px 22px rgba(217,178,76,0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
+.telegram-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 28px rgba(217,178,76,0.32);
+}
+
+.telegram-icon {
+    font-size: 20px;
+}
+
+/* Hindi/Urdu style quote */
+.hindi-quote {
+    margin: 22px 10px 24px;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.025);
+
+    border: 1px solid rgba(217,178,76,0.12);
+
+    color: #e6dfca;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.hindi-quote strong {
+    display: block;
+
+    color: #e8c95e;
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+/* Advertisement */
+.ads-contact {
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.20);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    color: #989f97;
+
+    font-size: 12px;
+}
+
+.ads-link {
+    color: #d9b24c;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.ads-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    font-size: 10px;
+
+    color: #68746d;
+
+    line-height: 1.8;
+}
+
+.footer-links {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #89948e;
+
+    text-decoration: none;
+
+    margin: 0 3px;
+}
+
+.footer-links a:hover {
+    color: #d9b24c;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 28px 19px 22px;
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .features-list li {
+        font-size: 13.5px;
+    }
+}
 </style>
 </head>
 
@@ -196,68 +485,129 @@ color:#9ca3af;
 
 <div class="container">
 
-<div class="header">
+    <div class="pattern"></div>
 
-<img class="profile" src="logo.png">
+    <!-- Islamic Logo -->
+    <div class="logo-box">
+        <div class="logo-allah">ﷲ</div>
+        <div class="logo-quran">QURAN • KNOWLEDGE</div>
+    </div>
 
-<div class="name">MALIK DUBAI</div>
+    <div class="brand-small">
+        BISMILLAH
+    </div>
 
-<div class="badges">
-<span class="badge premium">⭐ Premium Analyst</span>
-<span class="badge live">🔴 Live Updates</span>
-</div>
+    <h1>
+        HAJI SALMAN MEMON™
+    </h1>
 
-<div class="members">👥 100k+ Active Members</div>
+    <div class="subtitle">
+        Islamic Values • Learning • Knowledge
+    </div>
 
-</div>
+    <div class="divider">
+        ✦
+    </div>
 
-<div class="stats">
+    <ul class="features-list">
 
-<div class="card win">
-96%<br>WIN RATE
-</div>
+        <li>
+            <span class="icon">☪</span>
+            <span>
+                <strong>Learning & Educational Sessions</strong><br>
+                Knowledge-based learning community
+            </span>
+        </li>
 
-<div class="card rating">
-4.1 ⭐<br>RATING
-</div>
+        <li>
+            <span class="icon">📈</span>
+            <span>
+                <strong>Market Concepts & Awareness</strong><br>
+                Educational market discussions
+            </span>
+        </li>
 
-</div>
+        <li>
+            <span class="icon">📊</span>
+            <span>
+                <strong>Chart Reading Concepts</strong><br>
+                Understand charts and market basics
+            </span>
+        </li>
 
-<a class="telegram" href="https://t.me/">
+        <li>
+            <span class="icon">📖</span>
+            <span>
+                <strong>Educational Case Discussions</strong><br>
+                Learn through practical examples
+            </span>
+        </li>
 
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+    </ul>
 
-Join Telegram Channel
+    <p class="learning-text">
+        Knowledge grows when it is shared.
+        Join our learning community and improve your understanding
+        through educational discussions.
+    </p>
 
-</a>
+    <!-- Telegram -->
+    <a
+        href="https://t.me/+jRQ7iiLYn-lhNzk1"
+        class="telegram-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <span class="telegram-icon">✈</span>
+        JOIN TELEGRAM
+    </a>
 
-<div class="features">
+    <!-- Quote -->
+    <p class="hindi-quote">
+        <strong>بِسْمِ اللَّهِ</strong>
 
-<div class="feature">
-<div class="icon v">✔</div>
-Verified
-</div>
+        नियत अच्छी हो, मेहनत सच्ची हो और
+        इल्म हासिल करने का जज़्बा हो,
+        तो इंसान हर दिन कुछ नया सीख सकता है।
+    </p>
 
-<div class="feature">
-<div class="icon s">🔒</div>
-Secure
-</div>
+    <!-- Advertisement -->
+    <div class="ads-contact">
 
-<div class="feature">
-<div class="icon p">📈</div>
-Profitable
-</div>
+        This Channel Advertise By
 
-<div class="feature">
-<div class="icon t">⭐</div>
-Top Rated
-</div>
+        <a
+            href="https://t.me/+jE7sEbzR23gwM2U1"
+            class="ads-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            KUNAL ADS
+        </a>
 
-</div>
+    </div>
 
-<div class="footer">
-© 2026 Malik Dubai - All rights reserved.
-</div>
+    <!-- Footer -->
+    <div class="footer">
+
+        <div class="footer-links">
+            <a href="#">Terms</a>
+            |
+            <a href="#">Privacy</a>
+            |
+            <a href="#">Disclaimer</a>
+        </div>
+
+        <div>
+            Educational content only. Please make your own decisions
+            and verify information independently.
+        </div>
+
+        <div style="margin-top:5px;">
+            This site is not part of Facebook™ or endorsed by Facebook™.
+        </div>
+
+    </div>
 
 </div>
 
