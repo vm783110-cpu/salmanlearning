@@ -6,6 +6,39 @@
 
 <title>HAJI SALMAN MEMON™</title>
 
+<!-- =========================
+     FACEBOOK PIXEL
+     ========================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document, 'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1652782889795186');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=1652782889795186&ev=PageView&noscript=1"
+/>
+</noscript>
+
 <style>
 *{
     margin:0;
@@ -14,97 +47,92 @@
 }
 
 :root{
-    --green:#073b29;
     --dark:#02130d;
+    --dark2:#06291b;
+    --green:#0a4b32;
     --gold:#d8b45a;
-    --gold-light:#f1d987;
+    --gold2:#f3d889;
     --cream:#f5efdc;
-    --muted:#aeb8b1;
+    --muted:#9daaa2;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     min-height:100vh;
-    padding:18px;
+    padding:15px;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
     font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
 
-    color:white;
+    color:#fff;
 
     background:
         radial-gradient(
             circle at 50% -10%,
-            #155d40 0%,
-            #073622 35%,
-            #02130d 75%
+            #1b6546 0%,
+            #0a3926 30%,
+            #02130d 72%
         );
 
     overflow-x:hidden;
 }
 
-/* Background Islamic pattern */
-body:before{
+/* Subtle Islamic geometric background */
+body::before{
     content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
-    opacity:.045;
+    opacity:.035;
 
     background-image:
-        repeating-linear-gradient(
-            45deg,
-            transparent 0,
-            transparent 18px,
-            #d8b45a 19px,
-            transparent 20px
-        ),
-        repeating-linear-gradient(
-            -45deg,
-            transparent 0,
-            transparent 18px,
-            #d8b45a 19px,
-            transparent 20px
-        );
+        linear-gradient(45deg,#d8b45a 1px,transparent 1px),
+        linear-gradient(-45deg,#d8b45a 1px,transparent 1px);
+
+    background-size:42px 42px;
 }
 
-/* Main Card */
+/* Main card */
 .card{
     width:100%;
-    max-width:460px;
+    max-width:465px;
 
     position:relative;
     overflow:hidden;
 
-    padding:30px 22px 22px;
+    padding:30px 22px 23px;
 
     text-align:center;
 
-    border:1px solid rgba(216,180,90,.65);
+    border:1px solid rgba(216,180,90,.62);
     border-radius:30px;
 
     background:
         linear-gradient(
-            160deg,
-            rgba(10,58,40,.98),
+            155deg,
+            rgba(10,65,43,.98),
             rgba(2,19,13,.99)
         );
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,.65),
-        0 0 35px rgba(216,180,90,.10);
+        0 25px 70px rgba(0,0,0,.68),
+        0 0 40px rgba(216,180,90,.09);
 }
 
-/* Gold top decoration */
-.card:before{
+/* Gold top glow */
+.card::before{
     content:"";
     position:absolute;
 
@@ -118,19 +146,20 @@ body:before{
         linear-gradient(
             90deg,
             transparent,
-            var(--gold-light),
+            var(--gold2),
             var(--gold),
-            var(--gold-light),
+            var(--gold2),
             transparent
         );
 }
 
-/* Corner decorations */
+/* Decorative corners */
 .corner{
     position:absolute;
-    width:45px;
-    height:45px;
-    border-color:rgba(216,180,90,.45);
+    width:42px;
+    height:42px;
+
+    border-color:rgba(216,180,90,.40);
 }
 
 .corner.one{
@@ -163,8 +192,8 @@ body:before{
 
 /* Logo */
 .logo-wrap{
-    width:125px;
-    height:125px;
+    width:124px;
+    height:124px;
 
     margin:3px auto 17px;
 
@@ -175,14 +204,14 @@ body:before{
     background:
         linear-gradient(
             135deg,
-            var(--gold-light),
-            var(--gold),
-            #8d6920
+            #f5dc91,
+            #d8b45a,
+            #86651d
         );
 
     box-shadow:
         0 0 0 5px rgba(216,180,90,.07),
-        0 0 35px rgba(216,180,90,.17);
+        0 0 35px rgba(216,180,90,.18);
 }
 
 .logo{
@@ -195,12 +224,12 @@ body:before{
 
     object-fit:cover;
 
-    background:#0b2e20;
+    background:#0a3020;
 }
 
 /* Brand */
-.small-title{
-    color:var(--gold-light);
+.bismillah{
+    color:var(--gold2);
 
     font-size:11px;
     font-weight:800;
@@ -220,33 +249,29 @@ h1{
 
     color:#fff;
 
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
 .tagline{
-    color:#c7cbbf;
+    color:#c5ccc5;
 
     font-size:13px;
 
     margin-bottom:20px;
 }
 
-/* Islamic line */
-.islamic-line{
+/* Divider */
+.divider{
     display:flex;
     align-items:center;
-    justify-content:center;
-
     gap:10px;
 
-    margin-bottom:23px;
+    margin:0 10px 20px;
 
-    color:var(--gold-light);
-
-    font-size:15px;
+    color:var(--gold2);
 }
 
-.islamic-line span{
+.divider span{
     height:1px;
     flex:1;
 
@@ -258,7 +283,7 @@ h1{
         );
 }
 
-.islamic-line span:last-child{
+.divider span:last-child{
     background:
         linear-gradient(
             90deg,
@@ -267,22 +292,23 @@ h1{
         );
 }
 
-/* Trust strip */
-.trust{
+/* Small badges */
+.badges{
     display:flex;
     justify-content:center;
-    gap:7px;
+    align-items:center;
     flex-wrap:wrap;
+    gap:7px;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
-.trust span{
+.badge{
     padding:7px 11px;
 
     border-radius:30px;
 
-    color:#dfd4b5;
+    color:#e5d9b7;
 
     font-size:10px;
     font-weight:700;
@@ -292,11 +318,11 @@ h1{
     border:1px solid rgba(216,180,90,.18);
 }
 
-/* Feature cards */
+/* Features */
 .features{
     text-align:left;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .feature{
@@ -305,7 +331,7 @@ h1{
 
     gap:12px;
 
-    padding:13px;
+    padding:12px;
 
     margin-bottom:9px;
 
@@ -315,10 +341,19 @@ h1{
         linear-gradient(
             90deg,
             rgba(255,255,255,.045),
-            rgba(255,255,255,.018)
+            rgba(255,255,255,.015)
         );
 
     border:1px solid rgba(216,180,90,.12);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
+}
+
+.feature:hover{
+    transform:translateY(-1px);
+    border-color:rgba(216,180,90,.28);
 }
 
 .icon{
@@ -328,77 +363,79 @@ h1{
     min-width:40px;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     border-radius:12px;
 
-    color:var(--gold-light);
+    color:var(--gold2);
 
-    font-size:19px;
+    font-size:18px;
 
     background:rgba(216,180,90,.08);
 
-    border:1px solid rgba(216,180,90,.18);
+    border:1px solid rgba(216,180,90,.17);
 }
 
-.feature-text strong{
+.feature strong{
     display:block;
 
-    color:#f0eee6;
+    color:#eeeae0;
 
     font-size:13px;
 
     margin-bottom:3px;
 }
 
-.feature-text small{
-    color:#89958e;
+.feature small{
+    color:#89968f;
 
-    font-size:11px;
+    font-size:10.5px;
 }
 
-/* Quran / Islamic quote */
+/* Islamic quote box */
 .quote{
-    padding:16px 13px;
+    padding:15px 12px;
 
-    margin:4px 0 20px;
+    margin:3px 0 19px;
 
     border-radius:16px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(216,180,90,.08),
-            rgba(255,255,255,.025)
+            rgba(216,180,90,.075),
+            rgba(255,255,255,.018)
         );
 
-    border:1px solid rgba(216,180,90,.16);
+    border:1px solid rgba(216,180,90,.15);
 }
 
 .arabic{
-    color:var(--gold-light);
+    color:var(--gold2);
 
     font-family:Georgia,serif;
 
-    font-size:22px;
+    font-size:21px;
 
-    margin-bottom:7px;
+    line-height:1.5;
+
+    margin-bottom:5px;
 }
 
-.quote p{
-    color:#d3d1c6;
+.quote-text{
+    color:#d0d0c5;
 
-    font-size:12px;
+    font-size:11.5px;
 
     line-height:1.7;
 }
 
-/* Main CTA */
+/* Telegram CTA */
 .telegram-btn{
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     gap:10px;
 
@@ -420,12 +457,12 @@ h1{
     background:
         linear-gradient(
             135deg,
-            #f4dc91,
-            #d5ae4d
+            #f5dc91,
+            #d4aa43
         );
 
     box-shadow:
-        0 8px 25px rgba(216,180,90,.20);
+        0 9px 26px rgba(216,180,90,.20);
 
     transition:.2s ease;
 }
@@ -434,7 +471,7 @@ h1{
     transform:translateY(-2px);
 
     box-shadow:
-        0 12px 32px rgba(216,180,90,.32);
+        0 13px 34px rgba(216,180,90,.32);
 }
 
 .telegram-icon{
@@ -442,32 +479,34 @@ h1{
     height:27px;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     border-radius:50%;
 
-    color:white;
+    background:#087d62;
 
-    background:#087e65;
+    color:#fff;
 
     font-size:14px;
 }
 
-/* Bottom note */
+/* Educational disclaimer */
 .note{
-    color:#8d9790;
+    color:#8e9992;
 
     font-size:10px;
 
     line-height:1.7;
 
-    margin:14px 12px 18px;
+    margin:13px 12px 17px;
 }
 
-/* Ads */
+/* Advertiser */
 .ads{
     padding:12px;
+
+    margin-bottom:15px;
 
     border-radius:12px;
 
@@ -475,24 +514,26 @@ h1{
 
     border:1px solid rgba(255,255,255,.06);
 
-    color:#7e8982;
+    color:#7e8983;
 
     font-size:10px;
-
-    margin-bottom:16px;
 }
 
 .ads a{
-    color:var(--gold-light);
-
-    text-decoration:none;
+    color:var(--gold2);
 
     font-weight:800;
+
+    text-decoration:none;
+}
+
+.ads a:hover{
+    text-decoration:underline;
 }
 
 /* Footer */
 .footer{
-    color:#59655e;
+    color:#5e6963;
 
     font-size:9px;
 
@@ -500,7 +541,7 @@ h1{
 }
 
 .footer a{
-    color:#738078;
+    color:#748078;
 
     text-decoration:none;
 
@@ -508,18 +549,18 @@ h1{
 }
 
 .footer a:hover{
-    color:var(--gold-light);
+    color:var(--gold2);
 }
 
 /* Mobile */
 @media(max-width:480px){
 
     body{
-        padding:10px;
+        padding:9px;
     }
 
     .card{
-        padding:27px 17px 20px;
+        padding:27px 16px 20px;
         border-radius:25px;
     }
 
@@ -533,7 +574,7 @@ h1{
     }
 
     .feature{
-        padding:12px;
+        padding:11px;
     }
 }
 </style>
@@ -548,7 +589,10 @@ h1{
     <div class="corner three"></div>
     <div class="corner four"></div>
 
-    <!-- YOUR LOGO -->
+    <!-- =================================
+         YOUR LOGO
+         Keep logo.png beside this HTML file
+         ================================= -->
     <div class="logo-wrap">
         <img
             src="logo.png"
@@ -557,7 +601,7 @@ h1{
         >
     </div>
 
-    <div class="small-title">
+    <div class="bismillah">
         BISMILLAH
     </div>
 
@@ -569,17 +613,17 @@ h1{
         Knowledge • Learning • Islamic Values
     </div>
 
-    <div class="islamic-line">
+    <div class="divider">
         <span></span>
         ☪
         <span></span>
     </div>
 
-    <!-- Trust / identity badges -->
-    <div class="trust">
-        <span>☪ Islamic Values</span>
-        <span>📚 Educational</span>
-        <span>🤝 Community</span>
+    <!-- Badges -->
+    <div class="badges">
+        <div class="badge">☪ Islamic Values</div>
+        <div class="badge">📚 Educational</div>
+        <div class="badge">🤝 Community</div>
     </div>
 
     <!-- Features -->
@@ -588,36 +632,56 @@ h1{
         <div class="feature">
             <div class="icon">📖</div>
 
-            <div class="feature-text">
-                <strong>Learning & Educational Sessions</strong>
-                <small>Knowledge-focused learning discussions</small>
+            <div>
+                <strong>
+                    Learning & Educational Sessions
+                </strong>
+
+                <small>
+                    Knowledge-focused learning discussions
+                </small>
             </div>
         </div>
 
         <div class="feature">
             <div class="icon">📊</div>
 
-            <div class="feature-text">
-                <strong>Market Concepts & Awareness</strong>
-                <small>Educational market understanding</small>
+            <div>
+                <strong>
+                    Market Concepts & Awareness
+                </strong>
+
+                <small>
+                    Educational market understanding
+                </small>
             </div>
         </div>
 
         <div class="feature">
             <div class="icon">📈</div>
 
-            <div class="feature-text">
-                <strong>Chart Reading Concepts</strong>
-                <small>Learn basic chart-reading concepts</small>
+            <div>
+                <strong>
+                    Chart Reading Concepts
+                </strong>
+
+                <small>
+                    Learn basic chart-reading concepts
+                </small>
             </div>
         </div>
 
         <div class="feature">
             <div class="icon">💡</div>
 
-            <div class="feature-text">
-                <strong>Educational Case Discussions</strong>
-                <small>Practical examples and discussions</small>
+            <div>
+                <strong>
+                    Educational Case Discussions
+                </strong>
+
+                <small>
+                    Practical examples and discussions
+                </small>
             </div>
         </div>
 
@@ -630,16 +694,16 @@ h1{
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
         </div>
 
-        <p>
+        <div class="quote-text">
             इल्म हासिल करना और उसे दूसरों तक पहुँचाना
             एक खूबसूरत जिम्मेदारी है।
-        </p>
+        </div>
 
     </div>
 
-    <!-- Telegram -->
+    <!-- Telegram CTA -->
     <a
-        href="https://t.me/+IOO0HS6odv85NTk1"
+        href="https://t.me/+jRQ7iiLYn-lhNzk1"
         class="telegram-btn"
         target="_blank"
         rel="noopener noreferrer"
@@ -654,6 +718,21 @@ h1{
         your own decisions.
     </div>
 
+    <!-- Advertisement -->
+    <div class="ads">
+
+        This Channel Advertise By
+
+        <a
+            href="https://t.me/+jE7sEbzR23gwM2U1"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            KUNAL ADS
+        </a>
+
+    </div>
+
     <!-- Footer -->
     <div class="footer">
 
@@ -666,8 +745,8 @@ h1{
         </div>
 
         <div>
-            Educational purposes only. No guaranteed returns or
-            financial promises are made.
+            Educational purposes only. No guaranteed returns
+            or financial promises are made.
         </div>
 
         <div style="margin-top:4px;">
