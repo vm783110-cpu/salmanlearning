@@ -6,476 +6,534 @@
 
 <title>HAJI SALMAN MEMON™</title>
 
-<!-- Facebook Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1671426427431499');
-fbq('track', 'PageView');
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1671426427431499&ev=PageView&noscript=1"/>
-</noscript>
-
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    min-height: 100vh;
-    padding: 20px;
+:root{
+    --green:#073b29;
+    --dark:#02130d;
+    --gold:#d8b45a;
+    --gold-light:#f1d987;
+    --cream:#f5efdc;
+    --muted:#aeb8b1;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    min-height:100vh;
+    padding:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
 
-    color: #fff;
-
-    background:
-        radial-gradient(circle at top, #123d2b 0%, transparent 40%),
-        linear-gradient(145deg, #03130d, #061f15 50%, #020a07);
-
-    overflow-x: hidden;
-}
-
-/* Islamic decorative background */
-body::before {
-    content: "☪";
-    position: fixed;
-    top: 20px;
-    left: 20px;
-
-    font-size: 110px;
-    color: rgba(218, 178, 76, 0.045);
-
-    pointer-events: none;
-}
-
-body::after {
-    content: "ﷲ";
-    position: fixed;
-    right: 15px;
-    bottom: 10px;
-
-    font-size: 130px;
-    color: rgba(218, 178, 76, 0.035);
-
-    pointer-events: none;
-}
-
-/* Main Card */
-.container {
-    width: 100%;
-    max-width: 460px;
-
-    padding: 32px 25px 26px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(12, 48, 33, 0.98),
-            rgba(3, 20, 13, 0.98)
-        );
-
-    border: 1px solid rgba(218, 178, 76, 0.65);
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 0 0 1px rgba(255,255,255,0.02),
-        0 20px 60px rgba(0,0,0,0.65),
-        0 0 35px rgba(218,178,76,0.12);
-
-    position: relative;
-    overflow: hidden;
-}
-
-/* Gold top line */
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: 2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #d9b24c,
-            #f4d477,
-            #d9b24c,
-            transparent
-        );
-}
-
-/* Islamic pattern */
-.pattern {
-    position: absolute;
-    inset: 0;
-
-    opacity: 0.035;
-
-    background-image:
-        linear-gradient(30deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff),
-        linear-gradient(150deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff),
-        linear-gradient(30deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff),
-        linear-gradient(150deg, #fff 12%, transparent 12.5%, transparent 87%, #fff 87.5%, #fff);
-
-    background-size: 40px 70px;
-    background-position: 0 0, 0 0, 20px 35px, 20px 35px;
-
-    pointer-events: none;
-}
-
-/* Islamic Logo */
-.logo-box {
-    width: 115px;
-    height: 115px;
-
-    margin: 0 auto 18px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    border-radius: 50%;
+    color:white;
 
     background:
         radial-gradient(
-            circle,
-            #164e35 0%,
-            #0a2a1b 65%,
-            #06170f 100%
+            circle at 50% -10%,
+            #155d40 0%,
+            #073622 35%,
+            #02130d 75%
         );
 
-    border: 3px solid #d9b24c;
+    overflow-x:hidden;
+}
+
+/* Background Islamic pattern */
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.045;
+
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            transparent 0,
+            transparent 18px,
+            #d8b45a 19px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 18px,
+            #d8b45a 19px,
+            transparent 20px
+        );
+}
+
+/* Main Card */
+.card{
+    width:100%;
+    max-width:460px;
+
+    position:relative;
+    overflow:hidden;
+
+    padding:30px 22px 22px;
+
+    text-align:center;
+
+    border:1px solid rgba(216,180,90,.65);
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            160deg,
+            rgba(10,58,40,.98),
+            rgba(2,19,13,.99)
+        );
 
     box-shadow:
-        0 0 0 5px rgba(217,178,76,0.08),
-        0 0 25px rgba(217,178,76,0.15);
-
-    position: relative;
-    z-index: 2;
+        0 25px 70px rgba(0,0,0,.65),
+        0 0 35px rgba(216,180,90,.10);
 }
 
-.logo-allah {
-    font-family: "Times New Roman", serif;
-    font-size: 32px;
-    color: #f3d57a;
-    line-height: 1;
-    margin-bottom: 5px;
-}
+/* Gold top decoration */
+.card:before{
+    content:"";
+    position:absolute;
 
-.logo-quran {
-    font-size: 11px;
-    color: #e7d8a8;
-    letter-spacing: 1.5px;
-}
+    top:0;
+    left:8%;
+    right:8%;
 
-/* Brand */
-.brand-small {
-    color: #d9b24c;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 7px;
-}
-
-h1 {
-    font-size: 25px;
-    font-weight: 800;
-
-    color: #fff;
-
-    letter-spacing: 1.2px;
-
-    margin-bottom: 7px;
-}
-
-.subtitle {
-    color: #cdbf9b;
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-/* Divider */
-.divider {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    margin: 0 15px 25px;
-
-    color: #d9b24c;
-}
-
-.divider::before,
-.divider::after {
-    content: "";
-    height: 1px;
-    flex: 1;
+    height:2px;
 
     background:
         linear-gradient(
             90deg,
             transparent,
-            rgba(217,178,76,0.6)
-        );
-}
-
-.divider::after {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(217,178,76,0.6),
+            var(--gold-light),
+            var(--gold),
+            var(--gold-light),
             transparent
         );
 }
 
-/* Features */
-.features-list {
-    list-style: none;
-    text-align: left;
-
-    margin: 0 5px 25px;
+/* Corner decorations */
+.corner{
+    position:absolute;
+    width:45px;
+    height:45px;
+    border-color:rgba(216,180,90,.45);
 }
 
-.features-list li {
-    display: flex;
-    align-items: center;
-
-    padding: 14px 13px;
-    margin-bottom: 10px;
-
-    border-radius: 14px;
-
-    background: rgba(255,255,255,0.035);
-
-    border: 1px solid rgba(217,178,76,0.10);
-
-    color: #e5e1d5;
-
-    font-size: 14px;
-    line-height: 1.35;
-
-    transition: 0.2s ease;
+.corner.one{
+    top:14px;
+    left:14px;
+    border-top:1px solid;
+    border-left:1px solid;
 }
 
-.features-list li:hover {
-    transform: translateY(-1px);
-
-    background: rgba(217,178,76,0.07);
-
-    border-color: rgba(217,178,76,0.3);
+.corner.two{
+    top:14px;
+    right:14px;
+    border-top:1px solid;
+    border-right:1px solid;
 }
 
-.icon {
-    width: 37px;
-    height: 37px;
-
-    min-width: 37px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-right: 12px;
-
-    border-radius: 11px;
-
-    background: rgba(217,178,76,0.10);
-
-    border: 1px solid rgba(217,178,76,0.22);
-
-    color: #f0cf6c;
-
-    font-size: 18px;
+.corner.three{
+    bottom:14px;
+    left:14px;
+    border-bottom:1px solid;
+    border-left:1px solid;
 }
 
-/* Learning text */
-.learning-text {
-    color: #c9c9c0;
-
-    font-size: 13px;
-    line-height: 1.6;
-
-    margin: 5px 15px 18px;
+.corner.four{
+    bottom:14px;
+    right:14px;
+    border-bottom:1px solid;
+    border-right:1px solid;
 }
 
-/* Telegram Button */
-.telegram-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+/* Logo */
+.logo-wrap{
+    width:125px;
+    height:125px;
 
-    width: 100%;
+    margin:3px auto 17px;
 
-    padding: 17px 20px;
+    padding:5px;
 
-    border-radius: 50px;
-
-    text-decoration: none;
-
-    color: #07140d;
+    border-radius:50%;
 
     background:
         linear-gradient(
             135deg,
-            #f3d57a,
-            #d5a934
+            var(--gold-light),
+            var(--gold),
+            #8d6920
         );
 
-    font-size: 17px;
-    font-weight: 800;
+    box-shadow:
+        0 0 0 5px rgba(216,180,90,.07),
+        0 0 35px rgba(216,180,90,.17);
+}
 
-    letter-spacing: 0.5px;
+.logo{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#0b2e20;
+}
+
+/* Brand */
+.small-title{
+    color:var(--gold-light);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    margin-bottom:7px;
+}
+
+h1{
+    font-family:Georgia,serif;
+
+    font-size:26px;
+    line-height:1.2;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    margin-bottom:8px;
+}
+
+.tagline{
+    color:#c7cbbf;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+}
+
+/* Islamic line */
+.islamic-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:23px;
+
+    color:var(--gold-light);
+
+    font-size:15px;
+}
+
+.islamic-line span{
+    height:1px;
+    flex:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(216,180,90,.5)
+        );
+}
+
+.islamic-line span:last-child{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(216,180,90,.5),
+            transparent
+        );
+}
+
+/* Trust strip */
+.trust{
+    display:flex;
+    justify-content:center;
+    gap:7px;
+    flex-wrap:wrap;
+
+    margin-bottom:22px;
+}
+
+.trust span{
+    padding:7px 11px;
+
+    border-radius:30px;
+
+    color:#dfd4b5;
+
+    font-size:10px;
+    font-weight:700;
+
+    background:rgba(216,180,90,.07);
+
+    border:1px solid rgba(216,180,90,.18);
+}
+
+/* Feature cards */
+.features{
+    text-align:left;
+
+    margin-bottom:20px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:13px;
+
+    margin-bottom:9px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.018)
+        );
+
+    border:1px solid rgba(216,180,90,.12);
+}
+
+.icon{
+    width:40px;
+    height:40px;
+
+    min-width:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    color:var(--gold-light);
+
+    font-size:19px;
+
+    background:rgba(216,180,90,.08);
+
+    border:1px solid rgba(216,180,90,.18);
+}
+
+.feature-text strong{
+    display:block;
+
+    color:#f0eee6;
+
+    font-size:13px;
+
+    margin-bottom:3px;
+}
+
+.feature-text small{
+    color:#89958e;
+
+    font-size:11px;
+}
+
+/* Quran / Islamic quote */
+.quote{
+    padding:16px 13px;
+
+    margin:4px 0 20px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(216,180,90,.08),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(216,180,90,.16);
+}
+
+.arabic{
+    color:var(--gold-light);
+
+    font-family:Georgia,serif;
+
+    font-size:22px;
+
+    margin-bottom:7px;
+}
+
+.quote p{
+    color:#d3d1c6;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+/* Main CTA */
+.telegram-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:17px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#07170f;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:.7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4dc91,
+            #d5ae4d
+        );
 
     box-shadow:
-        0 7px 22px rgba(217,178,76,0.20);
+        0 8px 25px rgba(216,180,90,.20);
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition:.2s ease;
 }
 
-.telegram-btn:hover {
-    transform: translateY(-2px);
+.telegram-btn:hover{
+    transform:translateY(-2px);
 
     box-shadow:
-        0 10px 28px rgba(217,178,76,0.32);
+        0 12px 32px rgba(216,180,90,.32);
 }
 
-.telegram-icon {
-    font-size: 20px;
+.telegram-icon{
+    width:27px;
+    height:27px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:#087e65;
+
+    font-size:14px;
 }
 
-/* Hindi/Urdu style quote */
-.hindi-quote {
-    margin: 22px 10px 24px;
+/* Bottom note */
+.note{
+    color:#8d9790;
 
-    padding: 15px;
+    font-size:10px;
 
-    border-radius: 14px;
+    line-height:1.7;
 
-    background: rgba(255,255,255,0.025);
-
-    border: 1px solid rgba(217,178,76,0.12);
-
-    color: #e6dfca;
-
-    font-size: 14px;
-
-    line-height: 1.8;
+    margin:14px 12px 18px;
 }
 
-.hindi-quote strong {
-    display: block;
+/* Ads */
+.ads{
+    padding:12px;
 
-    color: #e8c95e;
+    border-radius:12px;
 
-    font-size: 12px;
+    background:rgba(0,0,0,.20);
 
-    margin-bottom: 3px;
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#7e8982;
+
+    font-size:10px;
+
+    margin-bottom:16px;
 }
 
-/* Advertisement */
-.ads-contact {
-    padding: 13px;
+.ads a{
+    color:var(--gold-light);
 
-    margin-bottom: 20px;
+    text-decoration:none;
 
-    border-radius: 12px;
-
-    background: rgba(0,0,0,0.20);
-
-    border: 1px solid rgba(255,255,255,0.07);
-
-    color: #989f97;
-
-    font-size: 12px;
-}
-
-.ads-link {
-    color: #d9b24c;
-
-    text-decoration: none;
-
-    font-weight: 700;
-}
-
-.ads-link:hover {
-    text-decoration: underline;
+    font-weight:800;
 }
 
 /* Footer */
-.footer {
-    font-size: 10px;
+.footer{
+    color:#59655e;
 
-    color: #68746d;
+    font-size:9px;
 
-    line-height: 1.8;
+    line-height:1.8;
 }
 
-.footer-links {
-    margin-bottom: 5px;
+.footer a{
+    color:#738078;
+
+    text-decoration:none;
+
+    margin:0 4px;
 }
 
-.footer-links a {
-    color: #89948e;
-
-    text-decoration: none;
-
-    margin: 0 3px;
-}
-
-.footer-links a:hover {
-    color: #d9b24c;
+.footer a:hover{
+    color:var(--gold-light);
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media(max-width:480px){
 
-    body {
-        padding: 12px;
+    body{
+        padding:10px;
     }
 
-    .container {
-        padding: 28px 19px 22px;
-        border-radius: 24px;
+    .card{
+        padding:27px 17px 20px;
+        border-radius:25px;
     }
 
-    h1 {
-        font-size: 22px;
+    .logo-wrap{
+        width:112px;
+        height:112px;
     }
 
-    .features-list li {
-        font-size: 13.5px;
+    h1{
+        font-size:23px;
+    }
+
+    .feature{
+        padding:12px;
     }
 }
 </style>
@@ -483,17 +541,23 @@ h1 {
 
 <body>
 
-<div class="container">
+<div class="card">
 
-    <div class="pattern"></div>
+    <div class="corner one"></div>
+    <div class="corner two"></div>
+    <div class="corner three"></div>
+    <div class="corner four"></div>
 
-    <!-- Islamic Logo -->
-    <div class="logo-box">
-        <div class="logo-allah">ﷲ</div>
-        <div class="logo-quran">QURAN • KNOWLEDGE</div>
+    <!-- YOUR LOGO -->
+    <div class="logo-wrap">
+        <img
+            src="logo.png"
+            alt="Haji Salman Memon"
+            class="logo"
+        >
     </div>
 
-    <div class="brand-small">
+    <div class="small-title">
         BISMILLAH
     </div>
 
@@ -501,55 +565,77 @@ h1 {
         HAJI SALMAN MEMON™
     </h1>
 
-    <div class="subtitle">
-        Islamic Values • Learning • Knowledge
+    <div class="tagline">
+        Knowledge • Learning • Islamic Values
     </div>
 
-    <div class="divider">
-        ✦
+    <div class="islamic-line">
+        <span></span>
+        ☪
+        <span></span>
     </div>
 
-    <ul class="features-list">
+    <!-- Trust / identity badges -->
+    <div class="trust">
+        <span>☪ Islamic Values</span>
+        <span>📚 Educational</span>
+        <span>🤝 Community</span>
+    </div>
 
-        <li>
-            <span class="icon">☪</span>
-            <span>
-                <strong>Learning & Educational Sessions</strong><br>
-                Knowledge-based learning community
-            </span>
-        </li>
+    <!-- Features -->
+    <div class="features">
 
-        <li>
-            <span class="icon">📈</span>
-            <span>
-                <strong>Market Concepts & Awareness</strong><br>
-                Educational market discussions
-            </span>
-        </li>
+        <div class="feature">
+            <div class="icon">📖</div>
 
-        <li>
-            <span class="icon">📊</span>
-            <span>
-                <strong>Chart Reading Concepts</strong><br>
-                Understand charts and market basics
-            </span>
-        </li>
+            <div class="feature-text">
+                <strong>Learning & Educational Sessions</strong>
+                <small>Knowledge-focused learning discussions</small>
+            </div>
+        </div>
 
-        <li>
-            <span class="icon">📖</span>
-            <span>
-                <strong>Educational Case Discussions</strong><br>
-                Learn through practical examples
-            </span>
-        </li>
+        <div class="feature">
+            <div class="icon">📊</div>
 
-    </ul>
+            <div class="feature-text">
+                <strong>Market Concepts & Awareness</strong>
+                <small>Educational market understanding</small>
+            </div>
+        </div>
 
-    <p class="learning-text">
-        Knowledge grows when it is shared.
-        Join our learning community and improve your understanding
-        through educational discussions.
-    </p>
+        <div class="feature">
+            <div class="icon">📈</div>
+
+            <div class="feature-text">
+                <strong>Chart Reading Concepts</strong>
+                <small>Learn basic chart-reading concepts</small>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">💡</div>
+
+            <div class="feature-text">
+                <strong>Educational Case Discussions</strong>
+                <small>Practical examples and discussions</small>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Islamic section -->
+    <div class="quote">
+
+        <div class="arabic">
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+        </div>
+
+        <p>
+            इल्म हासिल करना और उसे दूसरों तक पहुँचाना
+            एक खूबसूरत जिम्मेदारी है।
+        </p>
+
+    </div>
 
     <!-- Telegram -->
     <a
@@ -558,39 +644,32 @@ h1 {
         target="_blank"
         rel="noopener noreferrer"
     >
-        <span class="telegram-icon">✈</span>
-        JOIN TELEGRAM
+        <span class="telegram-icon">➤</span>
+        JOIN OUR TELEGRAM
     </a>
 
-    <!-- Quote -->
-    <p class="hindi-quote">
-        <strong>بِسْمِ اللَّهِ</strong>
-
-        नियत अच्छी हो, मेहनत सच्ची हो और
-        इल्म हासिल करने का जज़्बा हो,
-        तो इंसान हर दिन कुछ नया सीख सकता है।
-    </p>
+    <div class="note">
+        Educational content and community discussions.
+        Please verify information independently and make
+        your own decisions.
+    </div>
 
     <!-- Advertisement -->
-    <div class="ads-contact">
-
+    <div class="ads">
         This Channel Advertise By
-
         <a
             href="https://t.me/+jE7sEbzR23gwM2U1"
-            class="ads-link"
             target="_blank"
             rel="noopener noreferrer"
         >
             KUNAL ADS
         </a>
-
     </div>
 
     <!-- Footer -->
     <div class="footer">
 
-        <div class="footer-links">
+        <div>
             <a href="#">Terms</a>
             |
             <a href="#">Privacy</a>
@@ -599,11 +678,11 @@ h1 {
         </div>
 
         <div>
-            Educational content only. Please make your own decisions
-            and verify information independently.
+            Educational purposes only. No guaranteed returns or
+            financial promises are made.
         </div>
 
-        <div style="margin-top:5px;">
+        <div style="margin-top:4px;">
             This site is not part of Facebook™ or endorsed by Facebook™.
         </div>
 
