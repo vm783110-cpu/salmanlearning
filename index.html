@@ -89,7 +89,6 @@ body{
     overflow-x:hidden;
 }
 
-/* Islamic geometric background */
 body::before{
     content:"";
     position:fixed;
@@ -104,7 +103,6 @@ body::before{
     background-size:42px 42px;
 }
 
-/* Main Card */
 .card{
     width:100%;
     max-width:465px;
@@ -131,7 +129,6 @@ body::before{
         0 0 40px rgba(216,180,90,.09);
 }
 
-/* Gold top line */
 .card::after{
     content:"";
     position:absolute;
@@ -153,7 +150,6 @@ body::before{
         );
 }
 
-/* Decorative corners */
 .corner{
     position:absolute;
     width:42px;
@@ -191,7 +187,6 @@ body::before{
     border-right:1px solid;
 }
 
-/* Logo */
 .logo-wrap{
     width:124px;
     height:124px;
@@ -231,7 +226,6 @@ body::before{
     background:#0a3020;
 }
 
-/* Brand */
 .bismillah{
     color:var(--gold2);
 
@@ -264,7 +258,6 @@ h1{
     margin-bottom:20px;
 }
 
-/* Divider */
 .divider{
     display:flex;
     align-items:center;
@@ -296,7 +289,6 @@ h1{
         );
 }
 
-/* Badges */
 .badges{
     display:flex;
     justify-content:center;
@@ -322,7 +314,6 @@ h1{
     border:1px solid rgba(216,180,90,.18);
 }
 
-/* Features */
 .features{
     text-align:left;
 
@@ -397,7 +388,6 @@ h1{
     font-size:10.5px;
 }
 
-/* Islamic quote */
 .quote{
     padding:15px 12px;
 
@@ -435,7 +425,6 @@ h1{
     line-height:1.7;
 }
 
-/* Telegram CTA */
 .telegram-btn{
     display:flex;
     justify-content:center;
@@ -495,7 +484,6 @@ h1{
     font-size:14px;
 }
 
-/* Educational disclaimer */
 .note{
     color:#8e9992;
 
@@ -506,7 +494,6 @@ h1{
     margin:13px 12px 17px;
 }
 
-/* Footer */
 .footer{
     color:#5e6963;
 
@@ -529,7 +516,6 @@ h1{
     color:var(--gold2);
 }
 
-/* Mobile */
 @media(max-width:480px){
 
     body{
@@ -561,13 +547,11 @@ h1{
 
 <div class="card">
 
-    <!-- Decorative corners -->
     <div class="corner one"></div>
     <div class="corner two"></div>
     <div class="corner three"></div>
     <div class="corner four"></div>
 
-    <!-- Logo -->
     <div class="logo-wrap">
         <img
             src="logo.png"
@@ -576,7 +560,6 @@ h1{
         >
     </div>
 
-    <!-- Brand -->
     <div class="bismillah">
         BISMILLAH
     </div>
@@ -589,14 +572,12 @@ h1{
         Knowledge • Learning • Islamic Values
     </div>
 
-    <!-- Divider -->
     <div class="divider">
         <span></span>
         ☪
         <span></span>
     </div>
 
-    <!-- Badges -->
     <div class="badges">
 
         <div class="badge">
@@ -613,7 +594,6 @@ h1{
 
     </div>
 
-    <!-- Features -->
     <div class="features">
 
         <div class="feature">
@@ -690,7 +670,6 @@ h1{
 
     </div>
 
-    <!-- Islamic Section -->
     <div class="quote">
 
         <div class="arabic">
@@ -704,12 +683,13 @@ h1{
 
     </div>
 
-    <!-- Telegram Button -->
+    <!-- Telegram CTA -->
     <a
         href="https://t.me/+IOO0HS6odv85NTk1"
         class="telegram-btn"
         target="_blank"
         rel="noopener noreferrer"
+        onclick="trackTelegramClick(event, this.href)"
     >
         <span class="telegram-icon">
             ➤
@@ -725,7 +705,6 @@ h1{
         your own decisions.
     </div>
 
-    <!-- Footer -->
     <div class="footer">
 
         <div>
@@ -748,6 +727,45 @@ h1{
     </div>
 
 </div>
+
+<!-- =========================
+     TELEGRAM META TRACKING
+     ========================= -->
+<script>
+function trackTelegramClick(event, url) {
+
+    event.preventDefault();
+
+    if (typeof fbq === 'function') {
+
+        var eventId =
+            'telegram_' +
+            Date.now() +
+            '_' +
+            Math.random().toString(36).substring(2, 10);
+
+        fbq(
+            'track',
+            'Lead',
+            {
+                content_name: 'Telegram Join',
+                content_category: 'Telegram Community'
+            },
+            {
+                eventID: eventId
+            }
+        );
+
+        setTimeout(function(){
+            window.open(url, '_blank');
+        }, 400);
+
+    } else {
+
+        window.open(url, '_blank');
+    }
+}
+</script>
 
 </body>
 </html>
